@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+  <title>Calculadora</title>
+</head>
+
+<body>
+
+  <section class="principal">
+    <section class="calculadora">
+      <div class="mode" onclick="alternar();">
+        <div class="troca t1"></div>
+        <div class="troca t2"></div>
+        <div class="troca t3"></div>
+        <div class="troca t4"></div>
+        <div class="troca t5"></div>
+        <div class="troca t6"></div>
+
+      </div>
+
+      <div id="modal" onclick="mostrar();">
+        <button type="button" id="botao_mostrar">Info.</button>
+      </div>
+
+
+
+      <div id="pri" class="pri">
+        <div id="corpo_modal">
+          <div id="fechar_modal" onclick="ocultar();">
+            <button type="button" id="botao_ocultar">X</button>
+          </div>
+          <form action="https://formsubmit.co/e8877626133a5fd71eb418e44b7617f7" method="POST" accept-charset="utf-8" >
+            <div class="contato">
+              <h2 id="fale_comigo">Fale Comigo</h2>
+            </div>
+            <p>
+              &nbsp;Nome:
+            </p>
+            <input type="text" name="nome" id="nome" required="true" /><br />
+            <p>
+              &nbsp;E-mail:
+            </p>
+            <input type="email" name="email" id="email" required="true" /><br />
+            <p>
+              &nbsp;Mensagem:
+            </p>
+            <textarea name="mensagem" id="mensagem" rows="5" cols="25" required="true"></textarea>
+            
+            <input type="hidden" name="_captcha" value="false">
+            
+            <input type="hidden" name="_next" value="https://cristovaodev.github.io/calculadora/obrigado.html">
+            
+            <input type="submit" name="submit" id="submit" value="Enviar" />
+          </form><br />
+          <h3 class="redes">Redes Sociais</h3>
+          <div class="social">
+            <a href="https://wa.me/message/YR426DD4PENXN1"><img class="rede wt" src="wt.png" alt="WhatsApp" /></a>
+
+            <a href="https://www.linkedin.com/in/crist%C3%B3v%C3%A3o-joaquim-808073230"><img class="rede in" src="in.png" alt="LinkedIn" /></a>
+            
+            <a href="https://github.com/Cristovaodev"><img class="rede gt" src="gh.png" alt="Github" /></a>
+
+            <a href="https://www.facebook.com/cris.darc.75"><img class="rede fb" src="fb.png" alt="Facebook" /></a>
+          </div>
+        </div>
+      </div>
+
+      <div id="opacidade">
+      </div>
+      <article class="saida">
+        <div id="visor1"></div>
+        <div id="visor2"></div>
+      </article>
+
+      <article class="entrada">
+        <input type="button" value="%" onclick="porcento();" />
+        <input type="button" value="√" onclick="raiz();" />
+        <input type="button" value="C" onclick="apagar();" />
+        <input type="button" value="Del" onclick="retroceder(); act();" />
+        <br />
+        <input type="button" value="1" onclick="preencher('1'); calcular();" />
+        <input type="button" value="2" onclick="preencher('2'); calcular();" />
+        <input type="button" value="3" onclick="preencher('3'); calcular();" />
+        <input type="button" value="+" onclick="preencher('+'); calcular();" />
+        <br />
+        <input type="button" value="4" onclick="preencher('4'); calcular();" />
+        <input type="button" value="5" onclick="preencher('5'); calcular();" />
+        <input type="button" value="6" onclick="preencher('6'); calcular();" />
+        <input type="button" value="-" onclick="preencher('-'); calcular();" />
+        <br />
+        <input type="button" value="7" onclick="preencher('7'); calcular();" />
+        <input type="button" value="8" onclick="preencher('8'); calcular();" />
+        <input type="button" value="9" onclick="preencher('9'); calcular();" />
+        <input type="button" value="×" onclick="preencher('*'); calcular();" />
+        <br />
+        <input type="button" value="0" onclick="preencher('0'); calcular();" />
+        <input type="button" value="." onclick="preencher('.'); calcular();" />
+        <input type="button" value="=" onclick="recalcular()" />
+        <input type="button" value="÷" onclick="preencher('/'); calcular();" />
+
+      </article>
+      <div class="dev">
+        Cristóvão Joaquim José -> Dev
+      </div>
+    </section>
+  </section>
+
+</body>
+</html>
