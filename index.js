@@ -39,15 +39,25 @@ function calcular(){
 
 function porcento(){
   
-  getporcento = document.getElementById('visor1').innerHTML;
+  getporcento = document.getElementById('visor2').innerHTML;
+  if(getporcento!=""){
   document.getElementById('visor2').innerHTML = getporcento/100;
-  
+  }else{
+    getporcent = document.getElementById('visor1').innerHTML;
+    document.getElementById('visor2').innerHTML = getporcent/100;
+  }
 }
 
 function raiz(){
-  getraiz = document.getElementById('visor1').innerHTML;
+  getraiz = document.getElementById('visor2').innerHTML;
+  if(getraiz!=""){
   n_quadrado = Math.sqrt(getraiz);
   document.getElementById('visor2').innerHTML = n_quadrado;
+  }else{
+  getroot = document.getElementById('visor1').innerHTML;
+  n_quadrado = Math.sqrt(getraiz);
+  document.getElementById('visor2').innerHTML = n_quadrado;
+  }
 }
 
 function recalcular(){
